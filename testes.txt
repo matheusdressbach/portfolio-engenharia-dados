@@ -1,0 +1,7 @@
+29/09/2026 — Python 3, biblioteca padrão
+5 testes aprovados:
+- snapshot válido
+- rejeição de preço negativo
+- rejeição de referência de cliente ausente
+- detecção de valor adulterado na fato
+- detecção de agregado mensal adulterado

@@ -1,0 +1,16 @@
+{
+  "status": "APROVADO",
+  "objetos": 30,
+  "registros_exportados": 5642,
+  "lancamentos": 848,
+  "lancamentos_faturados": 827,
+  "meses": 18,
+  "faturamento": "3282277.0",
+  "margem_bruta": "1363789.7",
+  "verificacoes": [
+    "Integridade referencial",
+    "Valores monetários por lançamento",
+    "Totais e indicadores de cada mês"
+  ],
+  "escopo": "Reprocessamento local do snapshot exportado; não é ingestão PostgreSQL/API nem execução Airflow."
+}

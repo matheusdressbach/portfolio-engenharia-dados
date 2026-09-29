@@ -1,0 +1,200 @@
+[
+  {
+    "mes_referencia": "2025-04-01",
+    "faturamento": "197737.5",
+    "margem_bruta": "84887.4",
+    "clientes_ativos": 20,
+    "quantidade_lancamentos": 50,
+    "valor_meta": "530000",
+    "percentual_margem": "0.429293381",
+    "ticket_medio": "3954.750000000",
+    "percentual_atingimento_meta": "0.373089623"
+  },
+  {
+    "mes_referencia": "2025-05-01",
+    "faturamento": "216213.5",
+    "margem_bruta": "93438.1",
+    "clientes_ativos": 20,
+    "quantidade_lancamentos": 53,
+    "valor_meta": "540000",
+    "percentual_margem": "0.432156641",
+    "ticket_medio": "4079.500000000",
+    "percentual_atingimento_meta": "0.400395370"
+  },
+  {
+    "mes_referencia": "2025-06-01",
+    "faturamento": "202839.5",
+    "margem_bruta": "85461.8",
+    "clientes_ativos": 20,
+    "quantidade_lancamentos": 49,
+    "valor_meta": "550000",
+    "percentual_margem": "0.421327207",
+    "ticket_medio": "4139.581632653",
+    "percentual_atingimento_meta": "0.368799091"
+  },
+  {
+    "mes_referencia": "2025-07-01",
+    "faturamento": "210898.0",
+    "margem_bruta": "82352.7",
+    "clientes_ativos": 20,
+    "quantidade_lancamentos": 53,
+    "valor_meta": "560000",
+    "percentual_margem": "0.390485922",
+    "ticket_medio": "3979.207547170",
+    "percentual_atingimento_meta": "0.376603571"
+  },
+  {
+    "mes_referencia": "2025-08-01",
+    "faturamento": "191046.0",
+    "margem_bruta": "77054.9",
+    "clientes_ativos": 20,
+    "quantidade_lancamentos": 51,
+    "valor_meta": "570000",
+    "percentual_margem": "0.403331658",
+    "ticket_medio": "3746.000000000",
+    "percentual_atingimento_meta": "0.335168421"
+  },
+  {
+    "mes_referencia": "2025-09-01",
+    "faturamento": "193350.5",
+    "margem_bruta": "85153.7",
+    "clientes_ativos": 20,
+    "quantidade_lancamentos": 50,
+    "valor_meta": "580000",
+    "percentual_margem": "0.440411067",
+    "ticket_medio": "3867.010000000",
+    "percentual_atingimento_meta": "0.333362931"
+  },
+  {
+    "mes_referencia": "2025-10-01",
+    "faturamento": "212277.0",
+    "margem_bruta": "88853.0",
+    "clientes_ativos": 20,
+    "quantidade_lancamentos": 53,
+    "valor_meta": "590000",
+    "percentual_margem": "0.418571018",
+    "ticket_medio": "4005.226415094",
+    "percentual_atingimento_meta": "0.359791525"
+  },
+  {
+    "mes_referencia": "2025-11-01",
+    "faturamento": "178401.0",
+    "margem_bruta": "76259.4",
+    "clientes_ativos": 19,
+    "quantidade_lancamentos": 46,
+    "valor_meta": "600000",
+    "percentual_margem": "0.427460608",
+    "ticket_medio": "3878.282608696",
+    "percentual_atingimento_meta": "0.297335000"
+  },
+  {
+    "mes_referencia": "2025-12-01",
+    "faturamento": "195301.5",
+    "margem_bruta": "80304.3",
+    "clientes_ativos": 19,
+    "quantidade_lancamentos": 48,
+    "valor_meta": "610000",
+    "percentual_margem": "0.411181174",
+    "ticket_medio": "4068.781250000",
+    "percentual_atingimento_meta": "0.320166393"
+  },
+  {
+    "mes_referencia": "2026-01-01",
+    "faturamento": "192802.0",
+    "margem_bruta": "72661.8",
+    "clientes_ativos": 19,
+    "quantidade_lancamentos": 50,
+    "valor_meta": "620000",
+    "percentual_margem": "0.376872647",
+    "ticket_medio": "3856.040000000",
+    "percentual_atingimento_meta": "0.310970968"
+  },
+  {
+    "mes_referencia": "2026-02-01",
+    "faturamento": "156943.5",
+    "margem_bruta": "66397.9",
+    "clientes_ativos": 19,
+    "quantidade_lancamentos": 41,
+    "valor_meta": "630000",
+    "percentual_margem": "0.423068811",
+    "ticket_medio": "3827.890243902",
+    "percentual_atingimento_meta": "0.249116667"
+  },
+  {
+    "mes_referencia": "2026-03-01",
+    "faturamento": "180876.0",
+    "margem_bruta": "77354.0",
+    "clientes_ativos": 19,
+    "quantidade_lancamentos": 45,
+    "valor_meta": "640000",
+    "percentual_margem": "0.427663150",
+    "ticket_medio": "4019.466666667",
+    "percentual_atingimento_meta": "0.282618750"
+  },
+  {
+    "mes_referencia": "2026-04-01",
+    "faturamento": "162660.5",
+    "margem_bruta": "66346.9",
+    "clientes_ativos": 19,
+    "quantidade_lancamentos": 43,
+    "valor_meta": "650000",
+    "percentual_margem": "0.407885750",
+    "ticket_medio": "3782.802325581",
+    "percentual_atingimento_meta": "0.250246923"
+  },
+  {
+    "mes_referencia": "2026-05-01",
+    "faturamento": "173352.5",
+    "margem_bruta": "74392.0",
+    "clientes_ativos": 17,
+    "quantidade_lancamentos": 41,
+    "valor_meta": "660000",
+    "percentual_margem": "0.429137163",
+    "ticket_medio": "4228.109756098",
+    "percentual_atingimento_meta": "0.262655303"
+  },
+  {
+    "mes_referencia": "2026-06-01",
+    "faturamento": "147966.5",
+    "margem_bruta": "55698.7",
+    "clientes_ativos": 17,
+    "quantidade_lancamentos": 39,
+    "valor_meta": "670000",
+    "percentual_margem": "0.376427773",
+    "ticket_medio": "3794.012820513",
+    "percentual_atingimento_meta": "0.220845522"
+  },
+  {
+    "mes_referencia": "2026-07-01",
+    "faturamento": "164649.0",
+    "margem_bruta": "70575.9",
+    "clientes_ativos": 17,
+    "quantidade_lancamentos": 40,
+    "valor_meta": "680000",
+    "percentual_margem": "0.428644571",
+    "ticket_medio": "4116.225000000",
+    "percentual_atingimento_meta": "0.242130882"
+  },
+  {
+    "mes_referencia": "2026-08-01",
+    "faturamento": "159672.0",
+    "margem_bruta": "62239.4",
+    "clientes_ativos": 17,
+    "quantidade_lancamentos": 39,
+    "valor_meta": "690000",
+    "percentual_margem": "0.389795330",
+    "ticket_medio": "4094.153846154",
+    "percentual_atingimento_meta": "0.231408696"
+  },
+  {
+    "mes_referencia": "2026-09-01",
+    "faturamento": "145290.5",
+    "margem_bruta": "64357.8",
+    "clientes_ativos": 17,
+    "quantidade_lancamentos": 36,
+    "valor_meta": "700000",
+    "percentual_margem": "0.442959450",
+    "ticket_medio": "4035.847222222",
+    "percentual_atingimento_meta": "0.207557857"
+  }
+]
