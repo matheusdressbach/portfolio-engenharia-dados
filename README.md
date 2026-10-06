@@ -80,8 +80,13 @@ O projeto foi conferido sem conta de faturamento vinculada. A reprodução offli
 
 Consulte os limites atuais na [documentação oficial do BigQuery Sandbox](https://docs.cloud.google.com/bigquery/docs/sandbox?hl=pt-br) antes de reproduzir na nuvem.
 
-## Escopo e próximos desenvolvimentos
+## Escopo concluído do Projeto 1
 
 Todos os dados e valores de negócio são **sintéticos**. Esta versão comprova modelagem analítica no BigQuery, execução das consultas e conciliação offline de vendas e indicadores executivos. A carga usa reconstrução completa por SQL.
 
-Ingestão real de PostgreSQL/API, carga incremental e execução de Airflow **não foram realizadas**. São evoluções futuras da arquitetura V0.7. O dataset `controle` foi criado, mas está vazio nesta demonstração. A execução das 11 visualizações foi confirmada; a conciliação independente cobre vendas e indicadores executivos mensais, não todas as regras comerciais.
+O Projeto 1 está concluído no escopo de modelagem analítica, SQL e conciliação em Python. Ingestão PostgreSQL/API, carga incremental e orquestração Airflow foram desenvolvidas e validadas separadamente no [Projeto 2](projeto-02-pipeline-comercial/README.md); não são etapas pendentes deste projeto. O dataset `controle` foi criado, mas está vazio nesta demonstração. A execução das 11 visualizações foi confirmada; a conciliação independente cobre vendas e indicadores executivos mensais, não todas as regras comerciais.
+
+## Evidências dos projetos
+
+- [Projeto 1: execução no BigQuery e testes de conciliação](evidencias-projeto-1.md).
+- [Projeto 2: orquestração, qualidade e resultados](projeto-02-pipeline-comercial/docs/evidencias-visuais.md).

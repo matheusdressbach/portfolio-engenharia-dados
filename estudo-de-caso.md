@@ -22,7 +22,7 @@ O verificador também é testado com dados adulterados: preço negativo, referê
 
 As metas sintéticas estão muito acima das receitas e produzem sinais de risco; isso demonstra a regra, sem representar diagnóstico de empresa real. As 11 visualizações foram executadas e exportadas, mas a conciliação independente cobre vendas e indicadores executivos mensais, não cada regra comercial individualmente.
 
-Esta versão usa carga completa por SQL. Ingestão PostgreSQL/API, carga incremental, logs operacionais e orquestração Airflow não foram executados. A arquitetura original V0.7 deve ser avaliada separadamente antes de qualquer alegação de pipeline operacional completo.
+O Projeto 1 está concluído com carga completa por SQL, modelagem analítica e conciliação offline. A ingestão PostgreSQL/API, a carga incremental e a orquestração Airflow foram realizadas no [Projeto 2](projeto-02-pipeline-comercial/README.md), com evidências próprias. Esses recursos não fazem parte da implementação do Projeto 1 e não são pendências deste case.
 
 ## Permanência e apresentação
 

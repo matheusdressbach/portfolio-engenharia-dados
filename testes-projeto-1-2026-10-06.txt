@@ -1,0 +1,10 @@
+test_agregado_adulterado (__main__.ValidacaoTest.test_agregado_adulterado) ... ok
+test_cliente_ausente (__main__.ValidacaoTest.test_cliente_ausente) ... ok
+test_preco_negativo (__main__.ValidacaoTest.test_preco_negativo) ... ok
+test_snapshot_valido (__main__.ValidacaoTest.test_snapshot_valido) ... ok
+test_valor_fato_adulterado (__main__.ValidacaoTest.test_valor_fato_adulterado) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.166s
+
+OK
