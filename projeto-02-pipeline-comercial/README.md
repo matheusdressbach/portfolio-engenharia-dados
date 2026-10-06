@@ -1,19 +1,20 @@
 # Pipeline comercial: vendas, metas e devoluções
 
-Uma distribuidora precisa reunir os lançamentos do ERP e as metas do planejamento
-comercial, capturar correções e impedir que reexecuções dupliquem resultados.
-Este projeto integra PostgreSQL e uma REST API com Python e Apache Airflow,
-valida os dados antes de publicar e disponibiliza tabelas analíticas no BigQuery.
+Neste projeto, trabalhei a integração de vendas e metas de uma distribuidora fictícia.
+Os lançamentos vêm de um ERP em PostgreSQL e as metas, de uma REST API. O desafio
+era trazer os registros novos e corrigidos, repetir uma carga sem duplicar vendas
+e bloquear a publicação quando os dados não passassem pelas regras de qualidade.
+Usei Python e Airflow para o pipeline e BigQuery Sandbox para consultar o resultado.
 Todos os dados são sintéticos.
 
-A base ampliada reúne cerca de 5 mil lançamentos em 12 meses, 200 clientes,
+A base reúne 5.000 lançamentos, com histórico comercial de 12 meses, 200 clientes,
 40 produtos, 12 vendedores, metas mensais e 180 devoluções. Vendas anuladas usam
 `cancelado`; devoluções são eventos vinculados a vendas que foram realizadas.
 As dimensões seguem `dm.dim_vendedores`, `dm.dim_clientes`, `dm.dim_produtos`;
 os fatos ficam em `comercial.fato_lancamento_vendas`,
 `comercial.fato_metas_vendedores` e `comercial.fato_devolucoes`.
 
-## Arquitetura executada sem faturamento
+## Como o pipeline funciona
 
 ```mermaid
 flowchart LR
@@ -86,20 +87,20 @@ antigas não fazem o histórico importado escapar do incremental.
   Logs registram etapa, entidade, quantidade e duração; XCom leva apenas identificadores
   e contagens. A API tem paginação, timeout e retries para erros temporários.
 
-SQLite é persistido em volume e compartilhado pelas tarefas do LocalExecutor no
-mesmo computador. Não use essa configuração em executores distribuídos. O estado
-candidato é validado em memória, adequado ao volume deste case. Alterações de origem
+Escolhi SQLite para manter o estado do pipeline em um volume local, compartilhado
+pelas tarefas do LocalExecutor no mesmo computador. Não use essa configuração em executores distribuídos. O estado
+candidato é validado em memória, suficiente para esta base. Alterações de origem
 retroativas além da sobreposição precisam de reconciliação; não há promessa de CDC.
 
 ## O que foi validado
 
-A versão anterior à ampliação passou em **56 testes no Docker** e foi executada
-com PostgreSQL, API, Airflow e BigQuery Sandbox. Conferimos carga inicial, incremento,
-idempotência, falha de qualidade com dados/watermarks preservados e recuperação.
-A base ampliada passou em **61 testes no Docker** e foi publicada no Sandbox.
+A versão atual passou em **61 testes no Docker** e foi publicada no Sandbox.
+Durante os testes de integração, conferi carga inicial, incremento, reexecução,
+bloqueio por qualidade e recuperação. A falha de qualidade preservou os dados
+publicados e os watermarks.
 As consultas confirmaram as seis contagens, 5.000 chaves de venda distintas e
-os valores reconciliados com a massa gerada. A repetição dessa carga ampliada
-pela DAG também foi confirmada, mantendo os totais e as 5.000 chaves únicas.
+os valores reconciliados com a massa gerada. Uma nova execução da DAG sem alterações na origem manteve os totais e as
+5.000 chaves únicas.
 
 A análise de outubro/2025 a setembro/2026 foi reconciliada no BigQuery: 144
 combinações distintas de vendedor/mês, receita após devoluções de R$ 3.983.777,61,
@@ -131,7 +132,8 @@ PYTHONPATH=src python -m pipeline_comercial.cli demo
 A demonstração isolada usa outro cenário (4 lançamentos e R$ 600,00). O teste real da
 DAG roda na imagem Airflow 2.11.2 com Python 3.11; a origem usa PostgreSQL 16.8.
 
-## Publicação no GitHub
+## Organização do repositório
 
-Veja o [roteiro de publicação](docs/publicacao-github.md) para incluir este projeto
-no portfólio e conferir os arquivos antes do envio.
+Este projeto fica em `projeto-02-pipeline-comercial` no portfólio. O
+[guia de publicação](docs/publicacao-github.md) explica a configuração dos testes
+para quem quiser usar o projeto em outro repositório.
