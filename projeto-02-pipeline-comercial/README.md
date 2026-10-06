@@ -106,7 +106,7 @@ combinações distintas de vendedor/mês, receita após devoluções de R$ 3.983
 metas de R$ 3.900.960,00 e atingimento agregado de 102,12%.
 Veja [Harmonização das metas](docs/harmonizacao-metas.md).
 
-Veja [Validação](docs/validacao.md) e [Teste de qualidade](docs/teste-qualidade.md).
+Veja [Evidências visuais](docs/evidencias-visuais.md), [Validação](docs/validacao.md) e [Teste de qualidade](docs/teste-qualidade.md).
 Os resultados pequenos (3 lançamentos e R$ 330,00) pertencem à etapa anterior.
 O JSON de resultados esperados da base ampliada é um cálculo local reproduzível.
 
