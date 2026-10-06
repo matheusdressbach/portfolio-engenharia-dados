@@ -1,6 +1,6 @@
 # Operação sem faturamento
 
-O modo padrão agora é `PIPELINE_DESTINO=local`. PostgreSQL é a origem ERP e a API
+O modo padrão é `PIPELINE_DESTINO=local`. PostgreSQL é a origem ERP e a API
 fornece metas. A DAG executa o pipeline real, com raw, staging, qualidade,
 publicação por chave e watermarks em SQLite persistente no volume `pipeline-dados`.
 SQLite usa transação e upsert; o MERGE em SQL BigQuery continua na implementação
@@ -43,4 +43,4 @@ docker compose up -d --build
 No Airflow, mantenha a DAG pausada para começar. Abra `vendas_metas_diarias`
 e dispare uma execução manual. No modo local, a última etapa apenas retorna.
 Confira as sete tarefas verdes e os logs de extração e qualidade.
-Depois poderemos ativar o modo Sandbox com o ID do projeto confirmado.
+Para enviar os resultados ao BigQuery, configure o modo Sandbox conforme as instruções acima.

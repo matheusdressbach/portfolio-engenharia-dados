@@ -1,6 +1,6 @@
 # Evidências visuais do Projeto 2
 
-Todas as informações comerciais são sintéticas. As capturas documentam execuções específicas; não demonstram operação contínua ou disponibilidade permanente.
+Os dados comerciais são sintéticos. As capturas abaixo registram as consultas e os testes feitos durante o desenvolvimento.
 
 ## Conferência no BigQuery Sandbox — 06/10/2026
 
@@ -26,7 +26,7 @@ A tarefa `validar_qualidade` falhou no cenário controlado de meta com vendedor 
 
 ![Execução após corrigir a origem](evidencias/airflow-recuperacao.png)
 
-Após corrigir a referência do vendedor na origem, uma nova execução concluiu as sete tarefas. A falha anterior permanece no histórico e permite comparar os estados. As imagens históricas foram fornecidas pelo autor durante o teste real; não são novas execuções de 06/10/2026.
+Após corrigir a referência do vendedor na origem, uma nova execução concluiu as sete tarefas. A falha anterior permanece no histórico e permite comparar os estados. As duas capturas do teste de qualidade são de 03/10/2026; foram preservadas para mostrar a falha e a recuperação.
 
 ## Airflow acessível novamente — 06/10/2026
 

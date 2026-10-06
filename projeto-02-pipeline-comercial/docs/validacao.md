@@ -2,7 +2,7 @@
 
 ## Integração confirmada em 3 de outubro de 2026
 
-Resultados enviados pelo usuário durante a execução no Mac:
+Registros da execução local no Mac, com Docker e publicação no Sandbox:
 
 - Build Docker, PostgreSQL e API saudáveis; Airflow executando a DAG com sete tarefas.
 - **56 testes passaram no container**, incluindo importação e dependências da DAG.
@@ -27,7 +27,7 @@ O fluxo original com MERGE permanece como implementação alternativa não valid
 nesta conta. Testes de contrato usam mocks para o cliente BigQuery.
 
 A demonstração isolada já cobre rejeição de qualidade e rollback local.
-O teste de rejeição pela DAG real foi executado e confirmado pelo usuário:
+O teste de rejeição também foi executado pela DAG:
 
 - Execução `manual__2026-10-04T00:27:41.658523+00:00`: qualidade rejeitou
   `metas/2: id_vendedor sem dimensão`; publicação e sincronização bloqueadas.
@@ -36,13 +36,12 @@ O teste de rejeição pela DAG real foi executado e confirmado pelo usuário:
 - Após restaurar o vendedor 2 na origem, execução
   `manual__2026-10-04T00:35:50.101472+00:00`: sete tarefas com sucesso.
 
-O roteiro reproduzível está em `docs/teste-qualidade.md`. As consultas no BigQuery após a recuperação foram confirmadas pelas capturas
-enviadas pelo usuário: 3 lançamentos, 1 cancelado, receita ativa de R$ 330,00;
+O roteiro reproduzível está em `docs/teste-qualidade.md`. As consultas no BigQuery após a recuperação estão registradas nas capturas: 3 lançamentos, 1 cancelado, receita ativa de R$ 330,00;
 Ana Martins com meta de R$ 1.200,00 e Bruno Lopes com R$ 800,00.
 
 ## Evidências
 
-As capturas enviadas pelo usuário confirmam consultas e execuções descritas acima.
+As [capturas de execução](evidencias-visuais.md) registram as consultas e os estados da DAG.
 Os arquivos históricos `evidencias/demo.*` representam a demonstração isolada,
 cujo resultado (4 lançamentos e R$ 600,00) difere do cenário Docker real.
 
@@ -57,13 +56,13 @@ Os novos testes executam a massa inteira no destino local, repetem a carga e
 confirmam rollback e preservação dos watermarks quando o acumulado devolvido
 supera a venda. Conferem também venda inexistente, cancelamento, valores e datas.
 
-Integração da ampliação confirmada pelo usuário: migração e carga PostgreSQL
+Na integração da base ampliada: migração e carga PostgreSQL
 concluídas, **61 testes passaram no Docker**, e execução
 `manual__2026-10-04T00:52:29.826498+00:00` terminou com sete tarefas verdes.
 As consultas no Sandbox confirmaram 12 vendedores, 200 clientes, 40 produtos,
 5.000 vendas, 144 metas e 180 devoluções; 5.000 chaves distintas, 131 cancelados,
 receita líquida ativa de R$ 4.067.384,72 e devoluções de R$ 83.547,11.
-A repetição da DAG com a massa ampliada foi confirmada: execução
+Na repetição da DAG com a massa ampliada, a execução
 `manual__2026-10-04T00:57:05.191523+00:00` terminou com sete tarefas verdes e
 a consulta manteve 5.000 lançamentos e chaves distintas, 131 cancelados,
 receita ativa de R$ 4.067.384,72 e devoluções de R$ 83.547,11.

@@ -7,6 +7,7 @@
 | produtos | id_produto | dm.dim_produtos | um produto |
 | vendas | id_lancamento | comercial.fato_lancamento_vendas | um lançamento/item do ERP |
 | metas | id_meta | comercial.fato_metas_vendedores | um vendedor/competência |
+| devolucoes | id_devolucao | comercial.fato_devolucoes | um evento de devolução de um lançamento |
 
 As chaves naturais do ERP foram preservadas. Todas as tabelas recebem `atualizado_em`. Dimensões são tipo 1: mudança de nome substitui a versão anterior. O lançamento tem uma única chave; não é um pedido com múltiplos itens sem identificação individual.
 
@@ -31,4 +32,4 @@ Competência é o primeiro dia do mês. Há uma meta por vendedor/competência. 
 
 Raw: `execucao`, `entidade`, `chave`, `versao`, `payload`. Staging: `execucao` e campos tipados de cada entidade. Operação: ID de execução, fim exclusivo, mapa JSON dos limites inferiores, status, erro e timestamp de alteração. Watermarks: entidade e fim da última publicação aprovada.
 
-O PostgreSQL do Docker hospeda o ERP e uma tabela de planejamento que alimenta a API. São interfaces lógicas distintas no case, embora compartilhem um servidor para reduzir a configuração local. O usuário do pipeline lê somente o schema ERP; somente o usuário da API lê planejamento.
+O PostgreSQL do Docker hospeda o ERP e uma tabela de planejamento que alimenta a API. ERP e planejamento têm interfaces separadas, mas compartilham um servidor para simplificar a execução local. O usuário do pipeline lê somente o schema ERP; somente o usuário da API lê planejamento.
