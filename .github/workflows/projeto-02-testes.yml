@@ -1,0 +1,25 @@
+name: Projeto 2 — Testes do pipeline
+on: [push, pull_request]
+jobs:
+  unidade:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projeto-02-pipeline-comercial
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e '.[test]'
+      - run: pytest -q
+      - run: python -m pipeline_comercial.cli demo
+  airflow:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projeto-02-pipeline-comercial
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose build testes
+      - run: docker compose run --rm --no-deps testes
