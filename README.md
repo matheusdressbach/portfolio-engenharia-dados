@@ -1,5 +1,12 @@
 # Portfólio de Engenharia de Dados
 
+## Projetos
+
+- **Projeto 1 — Análise comercial:** BigQuery, SQL e conciliação em Python. Documentação e arquivos abaixo.
+- **[Projeto 2 — Pipeline comercial orquestrado](projeto-02-pipeline-comercial/README.md):** PostgreSQL, REST API, Python, Airflow e BigQuery Sandbox. Base sintética com 5.000 vendas, metas e devoluções; carga incremental, watermarks, idempotência e bloqueio por qualidade validados.
+
+## Projeto 1 — Análise comercial
+
 Demonstração de análise comercial com **BigQuery, SQL e Python**, dados sintéticos e reprodução offline. Desenvolvido por **Matheus Dressbach**.
 
 O projeto transforma vendas, metas e previsões em indicadores de faturamento, margem, clientes e desempenho comercial. A execução no BigQuery Sandbox foi validada em **29/09/2026**, na região de **São Paulo** (`southamerica-east1`).
