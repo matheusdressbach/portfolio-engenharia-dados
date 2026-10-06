@@ -7,7 +7,7 @@
 
 ## Projeto 1 — Análise comercial
 
-Demonstração de análise comercial com **BigQuery, SQL e Python**, dados sintéticos e reprodução offline. Desenvolvido por **Matheus Dressbach**.
+Projeto de análise comercial com **BigQuery, SQL e Python**, desenvolvido por **Matheus Dressbach**. Usei dados sintéticos para trabalhar vendas, metas e previsões e conferir os resultados fora do BigQuery.
 
 O projeto transforma vendas, metas e previsões em indicadores de faturamento, margem, clientes e desempenho comercial. A execução no BigQuery Sandbox foi validada em **29/09/2026**, na região de **São Paulo** (`southamerica-east1`).
 
@@ -25,7 +25,7 @@ O projeto transforma vendas, metas e previsões em indicadores de faturamento, m
 | Margem bruta sintética | R$ 1.363.789,70 |
 | Testes locais | 5 aprovados |
 
-## Arquitetura implementada
+## Organização dos dados
 
 ```mermaid
 flowchart LR
@@ -80,11 +80,11 @@ O projeto foi conferido sem conta de faturamento vinculada. A reprodução offli
 
 Consulte os limites atuais na [documentação oficial do BigQuery Sandbox](https://docs.cloud.google.com/bigquery/docs/sandbox?hl=pt-br) antes de reproduzir na nuvem.
 
-## Escopo concluído do Projeto 1
+## Escopo e limites
 
-Todos os dados e valores de negócio são **sintéticos**. Esta versão comprova modelagem analítica no BigQuery, execução das consultas e conciliação offline de vendas e indicadores executivos. A carga usa reconstrução completa por SQL.
+A carga reconstrói as tabelas por SQL. A conferência em Python cobre os valores por lançamento e os indicadores executivos mensais; as outras regras comerciais das visualizações não têm conciliação independente.
 
-O Projeto 1 está concluído no escopo de modelagem analítica, SQL e conciliação em Python. Ingestão PostgreSQL/API, carga incremental e orquestração Airflow foram desenvolvidas e validadas separadamente no [Projeto 2](projeto-02-pipeline-comercial/README.md); não são etapas pendentes deste projeto. O dataset `controle` foi criado, mas está vazio nesta demonstração. A execução das 11 visualizações foi confirmada; a conciliação independente cobre vendas e indicadores executivos mensais, não todas as regras comerciais.
+Encerrei este projeto com a modelagem, as consultas e a conciliação em Python. A evolução com ingestão e Airflow ficou no [Projeto 2](projeto-02-pipeline-comercial/README.md). O dataset `controle` foi criado na estrutura inicial, mas não é usado nesta versão.
 
 ## Evidências dos projetos
 

@@ -2,7 +2,7 @@
 
 ## Problema e objetivo
 
-Construir uma demonstração de engenharia de dados que transforme vendas, metas e previsões em indicadores comerciais, sem depender de serviços pagos para apresentação do portfólio.
+O ponto de partida foi organizar vendas, metas e previsões para responder perguntas comerciais: quanto foi faturado, qual margem restou e como clientes e vendedores se comportaram ao longo dos meses. Usei uma base sintética e o BigQuery Sandbox para poder reproduzir o trabalho sem contratar serviços.
 
 ## Solução implementada
 
@@ -22,8 +22,8 @@ O verificador também é testado com dados adulterados: preço negativo, referê
 
 As metas sintéticas estão muito acima das receitas e produzem sinais de risco; isso demonstra a regra, sem representar diagnóstico de empresa real. As 11 visualizações foram executadas e exportadas, mas a conciliação independente cobre vendas e indicadores executivos mensais, não cada regra comercial individualmente.
 
-O Projeto 1 está concluído com carga completa por SQL, modelagem analítica e conciliação offline. A ingestão PostgreSQL/API, a carga incremental e a orquestração Airflow foram realizadas no [Projeto 2](projeto-02-pipeline-comercial/README.md), com evidências próprias. Esses recursos não fazem parte da implementação do Projeto 1 e não são pendências deste case.
+Mantive a carga completa por SQL neste projeto. Para trabalhar ingestão PostgreSQL/API, incremental e Airflow, desenvolvi o [Projeto 2](projeto-02-pipeline-comercial/README.md). Isso permitiu encerrar a parte analítica aqui e tratar a operação do pipeline em um caso separado.
 
 ## Permanência e apresentação
 
-O Sandbox expira recursos; os arquivos locais não. O repositório pode preservar este estudo, SQL, exportações, evidências e o verificador. Este repositório preserva os arquivos e evidências. A publicação no LinkedIn é uma etapa separada. Ao publicar, descreva explicitamente os dados como sintéticos e o pipeline como demonstração da etapa analítica.
+As tabelas do Sandbox têm prazo de expiração. Por isso, mantive no repositório os scripts, as exportações e o verificador Python. Esses arquivos permitem conferir os resultados mesmo quando as tabelas não estiverem mais disponíveis na nuvem.
