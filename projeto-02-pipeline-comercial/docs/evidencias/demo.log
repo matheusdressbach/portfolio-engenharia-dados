@@ -1,0 +1,32 @@
+{"execucao": "dia-1", "etapa": "extracao", "entidade": "vendedores", "registros": 2, "segundos": 0.0}
+{"execucao": "dia-1", "etapa": "extracao", "entidade": "clientes", "registros": 1, "segundos": 0.001}
+{"execucao": "dia-1", "etapa": "extracao", "entidade": "produtos", "registros": 1, "segundos": 0.0}
+{"execucao": "dia-1", "etapa": "extracao", "entidade": "vendas", "registros": 2, "segundos": 0.0}
+{"execucao": "dia-1", "etapa": "extracao", "entidade": "metas", "registros": 2, "segundos": 0.0}
+{"execucao": "dia-1", "etapa": "staging", "contagens": {"vendedores": 2, "clientes": 1, "produtos": 1, "vendas": 2, "metas": 2}}
+{"execucao": "dia-1", "etapa": "qualidade", "regras": "aprovadas", "registros_candidatos": 8}
+{"execucao": "dia-1", "etapa": "publicacao", "status": "sucesso", "watermark": "2026-09-02T00:00:00.000000+00:00"}
+{"execucao": "dia-1", "etapa": "reexecucao", "status": "já publicada"}
+{"execucao": "dia-2", "etapa": "extracao", "entidade": "vendedores", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-2", "etapa": "extracao", "entidade": "clientes", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-2", "etapa": "extracao", "entidade": "produtos", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-2", "etapa": "extracao", "entidade": "vendas", "registros": 3, "segundos": 0.0}
+{"execucao": "dia-2", "etapa": "extracao", "entidade": "metas", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-2", "etapa": "staging", "contagens": {"vendedores": 0, "clientes": 0, "produtos": 0, "vendas": 3, "metas": 0}}
+{"execucao": "dia-2", "etapa": "qualidade", "regras": "aprovadas", "registros_candidatos": 9}
+{"execucao": "dia-2", "etapa": "publicacao", "status": "sucesso", "watermark": "2026-09-03T00:00:00.000000+00:00"}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "vendedores", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "clientes", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "produtos", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "vendas", "registros": 1, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "metas", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "staging", "contagens": {"vendedores": 0, "clientes": 0, "produtos": 0, "vendas": 1, "metas": 0}}
+{"execucao": "dia-3", "etapa": "falha", "tipo": "FalhaQualidade", "mensagem": "vendas/1004: id_vendedor sem dimensão"}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "vendedores", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "clientes", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "produtos", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "vendas", "registros": 1, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "extracao", "entidade": "metas", "registros": 0, "segundos": 0.0}
+{"execucao": "dia-3", "etapa": "staging", "contagens": {"vendedores": 0, "clientes": 0, "produtos": 0, "vendas": 1, "metas": 0}}
+{"execucao": "dia-3", "etapa": "qualidade", "regras": "aprovadas", "registros_candidatos": 10}
+{"execucao": "dia-3", "etapa": "publicacao", "status": "sucesso", "watermark": "2026-09-04T00:00:00.000000+00:00"}

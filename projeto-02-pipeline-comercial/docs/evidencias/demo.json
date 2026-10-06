@@ -1,0 +1,26 @@
+{
+  "lancamentos": 4,
+  "cancelados": 1,
+  "receita_liquida_ativa": "600.00",
+  "watermarks": {
+    "vendedores": "2026-09-04T00:00:00.000000+00:00",
+    "clientes": "2026-09-04T00:00:00.000000+00:00",
+    "produtos": "2026-09-04T00:00:00.000000+00:00",
+    "vendas": "2026-09-04T00:00:00.000000+00:00",
+    "metas": "2026-09-04T00:00:00.000000+00:00"
+  },
+  "execucoes": [
+    [
+      "dia-1",
+      "sucesso"
+    ],
+    [
+      "dia-2",
+      "sucesso"
+    ],
+    [
+      "dia-3",
+      "sucesso"
+    ]
+  ]
+}

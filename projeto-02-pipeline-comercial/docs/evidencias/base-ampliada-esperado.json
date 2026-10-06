@@ -1,0 +1,16 @@
+{
+  "natureza": "Cálculo local esperado; não representa uma carga executada no BigQuery",
+  "semente": 42,
+  "contagens": {
+    "vendedores": 12,
+    "clientes": 200,
+    "produtos": 40,
+    "vendas": 5000,
+    "devolucoes": 180,
+    "metas": 144
+  },
+  "cancelados": 131,
+  "receita_liquida_ativa": "4067384.72",
+  "valor_devolvido": "83547.11",
+  "receita_apos_devolucoes": "3983837.61"
+}

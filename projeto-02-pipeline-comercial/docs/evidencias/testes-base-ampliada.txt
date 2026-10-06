@@ -1,0 +1,3 @@
+Suíte unittest da base ampliada: 61 encontrados; 60 passaram; 1 ignorado (Airflow ausente).
+Massa completa executada em SQLite, com idempotência e rejeição de devolução excessiva.
+Integração no Docker e carga real no BigQuery pendentes.

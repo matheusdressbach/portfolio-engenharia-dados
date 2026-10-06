@@ -1,0 +1,4 @@
+Validação local em 2026-10-03: unittest discover -s tests -v
+53 testes encontrados: 52 passaram; 1 ignorado (Airflow indisponível fora do Docker).
+Publicador Sandbox validado com mocks, sem chamadas reais ao BigQuery.
+Teste de integração Docker e carga real no Sandbox pendentes.

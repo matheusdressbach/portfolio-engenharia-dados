@@ -1,0 +1,25 @@
+{
+  "fonte": "Saída do Terminal e capturas enviadas pelo usuário em 2026-10-03",
+  "testes_docker_aprovados": 61,
+  "execucao": "manual__2026-10-04T00:52:29.826498+00:00",
+  "tarefas": "7 com sucesso",
+  "contagens": {
+    "vendedores": 12,
+    "clientes": 200,
+    "produtos": 40,
+    "vendas": 5000,
+    "metas": 144,
+    "devolucoes": 180
+  },
+  "chaves_venda_distintas": 5000,
+  "cancelados": 131,
+  "receita_liquida_ativa": "4067384.72",
+  "valor_devolvido": "83547.11",
+  "receita_apos_devolucoes_calculada": "3983837.61",
+  "reexecucao_dag_base_ampliada": {
+    "execucao": "manual__2026-10-04T00:57:05.191523+00:00",
+    "tarefas": "7 com sucesso",
+    "totais_vendas_e_devolucoes": "inalterados conforme captura enviada pelo usuário",
+    "chaves_venda_distintas": 5000
+  }
+}

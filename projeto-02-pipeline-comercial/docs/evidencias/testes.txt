@@ -1,0 +1,51 @@
+test_contrato_servidor_e_cursor_de_desempate (test_api_metas.APIMetasTest.test_contrato_servidor_e_cursor_de_desempate) ... ok
+test_health_e_rota_inexistente (test_api_metas.APIMetasTest.test_health_e_rota_inexistente) ... ok
+test_janela_invertida_e_limite_invalido_retornam_400 (test_api_metas.APIMetasTest.test_janela_invertida_e_limite_invalido_retornam_400) ... ok
+test_carga_repetida_recupera_job_existente (test_bigquery.BigQueryTest.test_carga_repetida_recupera_job_existente) ... ok
+test_job_falho_transitorio_usa_outro_id (test_bigquery.BigQueryTest.test_job_falho_transitorio_usa_outro_id) ... ok
+test_job_nao_transitorio_nao_e_mascarado (test_bigquery.BigQueryTest.test_job_nao_transitorio_nao_e_mascarado) ... ok
+test_projeto_invalido_e_rejeitado_antes_de_criar_cliente (test_bigquery.BigQueryTest.test_projeto_invalido_e_rejeitado_antes_de_criar_cliente) ... ok
+test_publicacao_transacional_inclui_todas_as_tabelas_e_watermarks (test_bigquery.BigQueryTest.test_publicacao_transacional_inclui_todas_as_tabelas_e_watermarks) ... ok
+test_query_parametriza_id_e_informa_regiao (test_bigquery.BigQueryTest.test_query_parametriza_id_e_informa_regiao) ... ok
+test_dag_importa_e_define_dependencias (test_dag.DagTest.test_dag_importa_e_define_dependencias) ... skipped 'Airflow é validado na imagem Docker/CI'
+test_api_429_respeita_retry_after (test_fontes.FontesTest.test_api_429_respeita_retry_after) ... ok
+test_api_cursor_repetido_e_rejeitado (test_fontes.FontesTest.test_api_cursor_repetido_e_rejeitado) ... ok
+test_api_erro_4xx_nao_e_repetido (test_fontes.FontesTest.test_api_erro_4xx_nao_e_repetido) ... ok
+test_api_esgota_tentativas_de_rede (test_fontes.FontesTest.test_api_esgota_tentativas_de_rede) ... ok
+test_api_paginada_com_mesmo_timestamp (test_fontes.FontesTest.test_api_paginada_com_mesmo_timestamp) ... ok
+test_api_registro_fora_da_janela_e_rejeitado (test_fontes.FontesTest.test_api_registro_fora_da_janela_e_rejeitado) ... ok
+test_entidade_nao_permitida_e_rejeitada (test_fontes.FontesTest.test_entidade_nao_permitida_e_rejeitada) ... ok
+test_postgres_paginacao_keyset_e_snapshot (test_fontes.FontesTest.test_postgres_paginacao_keyset_e_snapshot) ... ok
+test_carga_inicial_e_reconciliacao (test_pipeline.PipelineTest.test_carga_inicial_e_reconciliacao) ... ok
+test_correcao_cancelamento_nova_venda (test_pipeline.PipelineTest.test_correcao_cancelamento_nova_venda) ... ok
+test_deduplicacao_mais_recente_e_conflito (test_pipeline.PipelineTest.test_deduplicacao_mais_recente_e_conflito) ... ok
+test_dimensao_publicada_valida_incremental_sem_dimensoes_no_lote (test_pipeline.PipelineTest.test_dimensao_publicada_valida_incremental_sem_dimensoes_no_lote) ... ok
+test_dinheiro_decimal_e_booleano_estrito (test_pipeline.PipelineTest.test_dinheiro_decimal_e_booleano_estrito) ... ok
+test_falha_api_nao_publica_erp_parcial (test_pipeline.PipelineTest.test_falha_api_nao_publica_erp_parcial) ... ok
+test_falha_no_registro_operacional_preserva_erro_original (test_pipeline.PipelineTest.test_falha_no_registro_operacional_preserva_erro_original) ... ok
+test_falha_normalizacao_preserva_watermark (test_pipeline.PipelineTest.test_falha_normalizacao_preserva_watermark) ... ok
+test_falha_qualidade_preserva_publicados_e_watermark (test_pipeline.PipelineTest.test_falha_qualidade_preserva_publicados_e_watermark) ... ok
+test_intervalo_exclusivo_e_empate_timestamp (test_pipeline.PipelineTest.test_intervalo_exclusivo_e_empate_timestamp) ... ok
+test_lookback_captura_atraso_curto (test_pipeline.PipelineTest.test_lookback_captura_atraso_curto) ... ok
+test_lote_vazio_avanca_watermark (test_pipeline.PipelineTest.test_lote_vazio_avanca_watermark) ... ok
+test_mesmo_id_outro_fim_rejeitado_sem_alterar_sucesso (test_pipeline.PipelineTest.test_mesmo_id_outro_fim_rejeitado_sem_alterar_sucesso) ... ok
+test_meta_duplicada_por_vendedor_competencia (test_pipeline.PipelineTest.test_meta_duplicada_por_vendedor_competencia) ... ok
+test_meta_negativa_ou_competencia_invalida (test_pipeline.PipelineTest.test_meta_negativa_ou_competencia_invalida) ... ok
+test_mudanca_sem_timestamp_nao_sobrescreve_publicado (test_pipeline.PipelineTest.test_mudanca_sem_timestamp_nao_sobrescreve_publicado) ... ok
+test_nova_execucao_antiga_rejeitada (test_pipeline.PipelineTest.test_nova_execucao_antiga_rejeitada) ... ok
+test_novo_id_com_mesma_janela_nao_duplica_fato (test_pipeline.PipelineTest.test_novo_id_com_mesma_janela_nao_duplica_fato) ... ok
+test_payload_invalido_corrigido_em_versao_mais_nova (test_pipeline.PipelineTest.test_payload_invalido_corrigido_em_versao_mais_nova) ... ok
+test_publicacao_sem_qualidade_e_barrada (test_pipeline.PipelineTest.test_publicacao_sem_qualidade_e_barrada) ... ok
+test_recuperacao_mesmo_id_preserva_janela_e_corrige_raw (test_pipeline.PipelineTest.test_recuperacao_mesmo_id_preserva_janela_e_corrige_raw) ... ok
+test_reexecucao_antiga_nao_regride_watermark_ou_dado (test_pipeline.PipelineTest.test_reexecucao_antiga_nao_regride_watermark_ou_dado) ... ok
+test_reexecucao_mesmo_id_nao_duplica_raw_ou_fato (test_pipeline.PipelineTest.test_reexecucao_mesmo_id_nao_duplica_raw_ou_fato) ... ok
+test_retry_apos_resposta_perdida_do_commit (test_pipeline.PipelineTest.test_retry_apos_resposta_perdida_do_commit) ... ok
+test_retry_extracao_parcial_nao_duplica_raw (test_pipeline.PipelineTest.test_retry_extracao_parcial_nao_duplica_raw) ... ok
+test_rollback_durante_publicacao_reverte_dimensoes_e_marcas (test_pipeline.PipelineTest.test_rollback_durante_publicacao_reverte_dimensoes_e_marcas) ... ok
+test_timestamp_sem_fuso_e_rejeitado (test_pipeline.PipelineTest.test_timestamp_sem_fuso_e_rejeitado) ... ok
+test_valor_negativo_desconto_excessivo_quantidade_zero (test_pipeline.PipelineTest.test_valor_negativo_desconto_excessivo_quantidade_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.293s
+
+OK (skipped=1)

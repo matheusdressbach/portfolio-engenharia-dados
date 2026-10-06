@@ -1,0 +1,19 @@
+{
+  "fonte": "Saída do Terminal e capturas do Airflow enviadas pelo usuário",
+  "execucao_rejeitada": "manual__2026-10-04T00:27:41.658523+00:00",
+  "erro": "metas/2: id_vendedor sem dimensão",
+  "publicados_preservados": true,
+  "watermarks_preservados": true,
+  "execucao_recuperacao": "manual__2026-10-04T00:35:50.101472+00:00",
+  "tarefas_recuperacao": "7 com sucesso",
+  "consulta_bigquery_apos_recuperacao": {
+    "lancamentos": 3,
+    "cancelados": 1,
+    "receita_liquida_ativa": "330.00",
+    "metas": {
+      "Ana Martins": "1200.00",
+      "Bruno Lopes": "800.00"
+    },
+    "evidencia": "Capturas enviadas pelo usuário às 21:38 em 2026-10-03"
+  }
+}

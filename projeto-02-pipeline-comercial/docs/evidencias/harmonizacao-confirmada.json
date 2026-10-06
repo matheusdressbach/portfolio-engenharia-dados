@@ -1,0 +1,36 @@
+{
+  "linhas": 144,
+  "inicio": "2025-10-01",
+  "fim": "2026-09-01",
+  "receita_apos_devolucoes": "3983777.61",
+  "metas": "3900960",
+  "atingimento_pct": "102.12",
+  "setembro": [
+    {
+      "competencia": "2026-09-01",
+      "nome": "Ana Martins",
+      "equipe": "Equipe Sudeste",
+      "regiao": "Sudeste",
+      "lancamentos": "52",
+      "cancelados": "0",
+      "receita_liquida_ativa": "23680.02",
+      "valor_devolvido": "58.2",
+      "receita_apos_devolucoes": "23621.82",
+      "valor_meta": "23040",
+      "atingimento_meta_pct": "102.53"
+    },
+    {
+      "competencia": "2026-09-01",
+      "nome": "Bruno Lopes",
+      "equipe": "Equipe Sudeste",
+      "regiao": "Sudeste",
+      "lancamentos": "44",
+      "cancelados": "1",
+      "receita_liquida_ativa": "20851.7",
+      "valor_devolvido": "456.3",
+      "receita_apos_devolucoes": "20395.4",
+      "valor_meta": "24480",
+      "atingimento_meta_pct": "83.31"
+    }
+  ]
+}
