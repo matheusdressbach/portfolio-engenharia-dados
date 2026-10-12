@@ -1,0 +1,70 @@
+version: 2
+snapshots:
+  - name: clientes_carteira
+    description: Versões observadas da carteira, com início dado pelo timestamp da origem.
+    columns:
+      - name: dbt_scd_id
+        data_tests: [unique, not_null]
+models:
+  - name: dim_clientes
+    description: Uma versão de cadastro por cliente e intervalo de vigência [início, fim).
+    columns:
+      - name: chave_cliente
+        data_tests: [unique, not_null]
+      - name: id_vendedor
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_vendedores')
+                field: id_vendedor
+  - name: dim_vendedores
+    description: Cadastro atual dos seis vendedores.
+    columns:
+      - name: id_vendedor
+        data_tests: [unique, not_null]
+  - name: dim_produtos
+    description: Cadastro atual dos produtos; não conserva mudanças de categoria.
+    columns:
+      - name: id_produto
+        data_tests: [unique, not_null]
+  - name: dim_meses
+    description: Calendário mensal fixo de 2025 para evitar meses incompletos no exemplo.
+    columns:
+      - name: competencia
+        data_tests: [unique, not_null]
+  - name: fato_pedidos
+    description: Um pedido, com os valores de seus itens e vendedor vigente na emissão.
+    columns:
+      - name: id_pedido
+        data_tests: [unique, not_null]
+      - name: chave_cliente
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_clientes')
+                field: chave_cliente
+  - name: fato_carteira_mensal
+    description: Um cliente por mês, com cadastro no fechamento e comportamento de compra.
+    columns:
+      - name: situacao_compra
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [novo, recorrente, reativado, sem_compra]
+  - name: desempenho_vendedores
+    description: Receita por vendedor histórico e carteira por vendedor no fechamento do mês.
+  - name: fato_itens_vendas
+    description: Um item de pedido, com receita conciliável e vendedor histórico.
+    columns:
+      - name: id_item
+        data_tests: [unique, not_null]
+  - name: comportamento_clientes
+    description: Um cliente por mês; sinais explicáveis com base exclusivamente no histórico até o fechamento.
+  - name: retencao_coortes
+    description: Compra mensal por primeira compra observada, com denominador fixo da coorte.
+  - name: concentracao_receita
+    description: Dependência mensal dos maiores clientes e índice de concentração.
+    columns:
+      - name: competencia
+        data_tests: [unique, not_null]
