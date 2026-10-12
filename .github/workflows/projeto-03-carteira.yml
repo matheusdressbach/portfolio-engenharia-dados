@@ -1,0 +1,28 @@
+name: carteira-comercial
+on:
+  push:
+    paths: ['projeto-03-carteira-comercial-dbt/**', '.github/workflows/projeto-03-carteira.yml']
+  pull_request:
+    paths: ['projeto-03-carteira-comercial-dbt/**', '.github/workflows/projeto-03-carteira.yml']
+  workflow_dispatch:
+jobs:
+  integracao:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projeto-03-carteira-comercial-dbt
+    steps:
+      - uses: actions/checkout@v4
+      - name: Iniciar banco isolado
+        run: docker compose up -d --wait postgres
+      - name: Validar dbt e histórico
+        run: docker compose run --build --rm verificar
+      - name: Guardar resultados
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validacao-carteira
+          path: projeto-03-carteira-comercial-dbt/resultados/
+      - name: Encerrar serviços
+        if: always()
+        run: docker compose down
