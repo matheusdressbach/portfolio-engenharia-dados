@@ -1,0 +1,59 @@
+version: 2
+sources:
+  - name: erp
+    schema: raw
+    description: Origem sintética controlada pelo roteiro de integração.
+    tables:
+      - name: clientes
+        columns:
+          - name: id_cliente
+            data_tests: [unique, not_null]
+          - name: atualizado_em
+            data_tests: [not_null]
+          - name: id_vendedor
+            data_tests:
+              - not_null
+              - relationships:
+                  arguments:
+                    to: source('erp', 'vendedores')
+                    field: id_vendedor
+      - name: vendedores
+        columns:
+          - name: id_vendedor
+            data_tests: [unique, not_null]
+      - name: produtos
+        columns:
+          - name: id_produto
+            data_tests: [unique, not_null]
+      - name: pedidos
+        columns:
+          - name: id_pedido
+            data_tests: [unique, not_null]
+          - name: id_cliente
+            data_tests:
+              - not_null
+              - relationships:
+                  arguments:
+                    to: source('erp', 'clientes')
+                    field: id_cliente
+          - name: status
+            data_tests:
+              - accepted_values:
+                  arguments:
+                    values: [faturado, cancelado]
+      - name: itens_pedidos
+        columns:
+          - name: id_item
+            data_tests: [unique, not_null]
+          - name: id_pedido
+            data_tests:
+              - relationships:
+                  arguments:
+                    to: source('erp', 'pedidos')
+                    field: id_pedido
+          - name: id_produto
+            data_tests:
+              - relationships:
+                  arguments:
+                    to: source('erp', 'produtos')
+                    field: id_produto
