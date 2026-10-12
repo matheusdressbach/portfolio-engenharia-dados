@@ -1,0 +1,33 @@
+name: carteira-comercial-dbt
+services:
+  postgres:
+    image: postgres:16.8
+    environment:
+      POSTGRES_USER: carteira
+      POSTGRES_PASSWORD: carteira_local
+      POSTGRES_DB: carteira_demo
+    volumes:
+      - carteira-dados:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U carteira -d carteira_demo"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  dbt:
+    build: .
+    working_dir: /projeto
+    volumes:
+      - .:/projeto
+    environment:
+      PGHOST: postgres
+      PGUSER: carteira
+      PGPASSWORD: carteira_local
+      PGDATABASE: carteira_demo
+    depends_on:
+      postgres:
+        condition: service_healthy
+  verificar:
+    extends: dbt
+    entrypoint: ["python", "scripts/verificar_integracao.py"]
+volumes:
+  carteira-dados:

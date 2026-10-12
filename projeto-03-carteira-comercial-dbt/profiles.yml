@@ -1,0 +1,13 @@
+carteira_comercial:
+  target: local
+  outputs:
+    local:
+      type: postgres
+      host: "{{ env_var('PGHOST', 'postgres') }}"
+      user: "{{ env_var('PGUSER', 'carteira') }}"
+      password: "{{ env_var('PGPASSWORD', 'carteira_local') }}"
+      port: "{{ env_var('PGPORT', '5432') | int }}"
+      dbname: "{{ env_var('PGDATABASE', 'carteira_demo') }}"
+      schema: dbt
+      threads: 2
+      connect_timeout: 10

@@ -1,0 +1,6 @@
+target
+logs
+.git
+.env
+__pycache__
+resultados

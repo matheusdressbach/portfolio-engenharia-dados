@@ -1,0 +1,27 @@
+name: carteira_comercial
+version: '1.0.0'
+config-version: 2
+profile: carteira_comercial
+model-paths: [models]
+snapshot-paths: [snapshots]
+test-paths: [tests]
+analysis-paths: [analyses]
+macro-paths: [macros]
+clean-targets: [target, logs]
+models:
+  carteira_comercial:
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediario:
+      +schema: intermediario
+      +materialized: view
+    dm:
+      +schema: dm
+      +materialized: table
+    comercial:
+      +schema: comercial
+      +materialized: table
+snapshots:
+  carteira_comercial:
+    +schema: historico
