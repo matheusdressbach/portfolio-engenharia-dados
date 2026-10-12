@@ -5,6 +5,8 @@
 - **Projeto 1 — Análise comercial:** BigQuery, SQL e conciliação em Python. Documentação e arquivos abaixo.
 - **[Projeto 2 — Pipeline comercial orquestrado](projeto-02-pipeline-comercial/README.md):** PostgreSQL, REST API, Python, Airflow e BigQuery Sandbox. Base sintética com 5.000 vendas, metas e devoluções; carga incremental, watermarks, idempotência e bloqueio por qualidade validados.
 
+- **[Projeto 3 — Histórico e análise da carteira comercial](projeto-03-carteira-comercial-dbt/README.md):** dbt, PostgreSQL e Docker. Histórico de clientes, retenção por coorte, concentração de receita e sinais de queda comercial, com 50 testes e conciliação em Python.
+
 ## Projeto 1 — Análise comercial
 
 Projeto de análise comercial com **BigQuery, SQL e Python**, desenvolvido por **Matheus Dressbach**. Usei dados sintéticos para trabalhar vendas, metas e previsões e conferir os resultados fora do BigQuery.
