@@ -1,0 +1,89 @@
+19:48:28  Running with dbt=1.10.13
+19:48:29  Registered adapter: postgres=1.10.0
+19:48:30  Found 17 models, 1 snapshot, 4 analyses, 50 data tests, 5 sources, 477 macros
+19:48:30  
+19:48:30  Concurrency: 2 threads (target='local')
+19:48:30  
+19:48:30  1 of 1 START test vigencias_sem_sobreposicao ................................... [RUN]
+19:48:30  1 of 1 FAIL 1 vigencias_sem_sobreposicao ....................................... [FAIL 1 in 0.06s]
+19:48:30  
+19:48:30  Finished running 1 test in 0 hours 0 minutes and 0.34 seconds (0.34s).
+19:48:30  
+19:48:30  Completed with 1 error, 0 partial successes, and 0 warnings:
+19:48:30  
+19:48:30  Failure in test vigencias_sem_sobreposicao (tests/vigencias_sem_sobreposicao.sql)
+19:48:30    Got 1 result, configured to fail if != 0
+19:48:30  
+19:48:30    compiled code at target/compiled/carteira_comercial/tests/vigencias_sem_sobreposicao.sql
+19:48:30  
+19:48:30  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+
+19:48:32  Running with dbt=1.10.13
+19:48:33  Registered adapter: postgres=1.10.0
+19:48:33  Found 17 models, 1 snapshot, 4 analyses, 50 data tests, 5 sources, 477 macros
+19:48:33  
+19:48:33  Concurrency: 2 threads (target='local')
+19:48:33  
+19:48:33  1 of 1 START test itens_com_valores_validos .................................... [RUN]
+19:48:33  1 of 1 FAIL 1 itens_com_valores_validos ........................................ [FAIL 1 in 0.05s]
+19:48:33  
+19:48:33  Finished running 1 test in 0 hours 0 minutes and 0.21 seconds (0.21s).
+19:48:33  
+19:48:33  Completed with 1 error, 0 partial successes, and 0 warnings:
+19:48:33  
+19:48:33  Failure in test itens_com_valores_validos (tests/itens_com_valores_validos.sql)
+19:48:33    Got 1 result, configured to fail if != 0
+19:48:33  
+19:48:33    compiled code at target/compiled/carteira_comercial/tests/itens_com_valores_validos.sql
+19:48:33  
+19:48:33  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+
+19:48:35  Running with dbt=1.10.13
+19:48:35  Registered adapter: postgres=1.10.0
+19:48:36  Found 17 models, 1 snapshot, 4 analyses, 50 data tests, 5 sources, 477 macros
+19:48:36  
+19:48:36  Concurrency: 2 threads (target='local')
+19:48:36  
+19:48:36  1 of 6 START test source_not_null_erp_clientes_atualizado_em ................... [RUN]
+19:48:36  2 of 6 START test source_not_null_erp_clientes_id_cliente ...................... [RUN]
+19:48:36  2 of 6 PASS source_not_null_erp_clientes_id_cliente ............................ [PASS in 0.06s]
+19:48:36  1 of 6 PASS source_not_null_erp_clientes_atualizado_em ......................... [PASS in 0.06s]
+19:48:36  4 of 6 START test source_relationships_erp_clientes_id_vendedor__id_vendedor__source_erp_vendedores_  [RUN]
+19:48:36  3 of 6 START test source_not_null_erp_clientes_id_vendedor ..................... [RUN]
+19:48:36  3 of 6 PASS source_not_null_erp_clientes_id_vendedor ........................... [PASS in 0.03s]
+19:48:36  5 of 6 START test source_relationships_erp_pedidos_id_cliente__id_cliente__source_erp_clientes_  [RUN]
+19:48:36  4 of 6 FAIL 1 source_relationships_erp_clientes_id_vendedor__id_vendedor__source_erp_vendedores_  [FAIL 1 in 0.04s]
+19:48:36  6 of 6 START test source_unique_erp_clientes_id_cliente ........................ [RUN]
+19:48:36  5 of 6 PASS source_relationships_erp_pedidos_id_cliente__id_cliente__source_erp_clientes_  [PASS in 0.04s]
+19:48:36  6 of 6 PASS source_unique_erp_clientes_id_cliente .............................. [PASS in 0.03s]
+19:48:36  
+19:48:36  Finished running 6 data tests in 0 hours 0 minutes and 0.28 seconds (0.28s).
+19:48:36  
+19:48:36  Completed with 1 error, 0 partial successes, and 0 warnings:
+19:48:36  
+19:48:36  Failure in test source_relationships_erp_clientes_id_vendedor__id_vendedor__source_erp_vendedores_ (models/staging/fontes.yml)
+19:48:36    Got 1 result, configured to fail if != 0
+19:48:36  
+19:48:36    compiled code at target/compiled/carteira_comercial/models/staging/fontes.yml/source_relationships_erp_clien_987cfbb9810b92e0001529f6a8ccbff3.sql
+19:48:36  
+19:48:36  Done. PASS=5 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=6
+
+19:48:38  Running with dbt=1.10.13
+19:48:38  Registered adapter: postgres=1.10.0
+19:48:39  Found 17 models, 1 snapshot, 4 analyses, 50 data tests, 5 sources, 477 macros
+19:48:39  
+19:48:39  Concurrency: 2 threads (target='local')
+19:48:39  
+19:48:39  1 of 1 START test pedido_na_vigencia ........................................... [RUN]
+19:48:39  1 of 1 FAIL 1 pedido_na_vigencia ............................................... [FAIL 1 in 0.05s]
+19:48:39  
+19:48:39  Finished running 1 test in 0 hours 0 minutes and 0.21 seconds (0.21s).
+19:48:39  
+19:48:39  Completed with 1 error, 0 partial successes, and 0 warnings:
+19:48:39  
+19:48:39  Failure in test pedido_na_vigencia (tests/pedido_na_vigencia.sql)
+19:48:39    Got 1 result, configured to fail if != 0
+19:48:39  
+19:48:39    compiled code at target/compiled/carteira_comercial/tests/pedido_na_vigencia.sql
+19:48:39  
+19:48:39  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
