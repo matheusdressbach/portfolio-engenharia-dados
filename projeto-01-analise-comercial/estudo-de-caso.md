@@ -22,7 +22,7 @@ O verificador também é testado com dados adulterados: preço negativo, referê
 
 As metas sintéticas estão muito acima das receitas e produzem sinais de risco; isso demonstra a regra, sem representar diagnóstico de empresa real. As 11 visualizações foram executadas e exportadas, mas a conciliação independente cobre vendas e indicadores executivos mensais, não cada regra comercial individualmente.
 
-Mantive a carga completa por SQL neste projeto. Para trabalhar ingestão PostgreSQL/API, incremental e Airflow, desenvolvi o [Projeto 2](projeto-02-pipeline-comercial/README.md). Isso permitiu encerrar a parte analítica aqui e tratar a operação do pipeline em um caso separado.
+Mantive a carga completa por SQL neste projeto. Para trabalhar ingestão PostgreSQL/API, incremental e Airflow, desenvolvi o [Projeto 2](../projeto-02-pipeline-comercial/README.md). Isso permitiu encerrar a parte analítica aqui e tratar a operação do pipeline em um caso separado.
 
 ## Permanência e apresentação
 
