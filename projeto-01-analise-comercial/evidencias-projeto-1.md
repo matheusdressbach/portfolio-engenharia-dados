@@ -1,6 +1,6 @@
 # Evidências do Projeto 1
 
-O escopo do Projeto 1 está concluído: modelagem em camadas, indicadores comerciais no BigQuery e conciliação independente em Python. A orquestração e a ingestão incremental foram entregues no [Projeto 2](projeto-02-pipeline-comercial/README.md).
+O escopo do Projeto 1 está concluído: modelagem em camadas, indicadores comerciais no BigQuery e conciliação independente em Python. A orquestração e a ingestão incremental foram entregues no [Projeto 2](../projeto-02-pipeline-comercial/README.md).
 
 ## Execução no BigQuery
 
