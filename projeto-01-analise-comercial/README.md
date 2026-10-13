@@ -1,13 +1,7 @@
-# Portfólio de Engenharia de Dados
+# Projeto 1 — Análise comercial
 
-## Projetos
+[Voltar ao portfólio](../README.md)
 
-- **Projeto 1 — Análise comercial:** BigQuery, SQL e conciliação em Python. Documentação e arquivos abaixo.
-- **[Projeto 2 — Pipeline comercial orquestrado](projeto-02-pipeline-comercial/README.md):** PostgreSQL, REST API, Python, Airflow e BigQuery Sandbox. Base sintética com 5.000 vendas, metas e devoluções; carga incremental, watermarks, idempotência e bloqueio por qualidade validados.
-
-- **[Projeto 3 — Histórico e análise da carteira comercial](projeto-03-carteira-comercial-dbt/README.md):** dbt, PostgreSQL e Docker. Histórico de clientes, retenção por coorte, concentração de receita e sinais de queda comercial, com 50 testes e conciliação em Python.
-
-## Projeto 1 — Análise comercial
 
 Projeto de análise comercial com **BigQuery, SQL e Python**, desenvolvido por **Matheus Dressbach**. Usei dados sintéticos para trabalhar vendas, metas e previsões e conferir os resultados fora do BigQuery.
 
@@ -47,7 +41,7 @@ As visualizações incluem indicadores executivos, desempenho de vendedores, cur
 
 ## Reproduzir sem internet ou conta Google
 
-Baixe o repositório em **Code → Download ZIP**, extraia o arquivo e abra um terminal na pasta extraída. Com Python 3 instalado:
+Baixe o repositório em **Code → Download ZIP**, extraia o arquivo e abra um terminal na pasta `projeto-01-analise-comercial`. Com Python 3 instalado:
 
 ```sh
 python3 reproduzir_offline.py
@@ -70,7 +64,7 @@ O segundo comando verifica o snapshot válido e a detecção de quatro erros int
 - [Resultado da validação](validacao.json)
 - [Pacote estruturado original para download](portfolio-sem-custos-validado.zip)
 
-Os arquivos estão na raiz para facilitar a navegação. O ZIP original mantém a organização em pastas e as instruções específicas daquela distribuição.
+Os arquivos desta entrega estão reunidos na pasta do Projeto 1. O ZIP original mantém a organização em pastas e as instruções específicas daquela distribuição.
 
 ## Evidência de execução
 
@@ -86,9 +80,5 @@ Consulte os limites atuais na [documentação oficial do BigQuery Sandbox](https
 
 A carga reconstrói as tabelas por SQL. A conferência em Python cobre os valores por lançamento e os indicadores executivos mensais; as outras regras comerciais das visualizações não têm conciliação independente.
 
-Encerrei este projeto com a modelagem, as consultas e a conciliação em Python. A evolução com ingestão e Airflow ficou no [Projeto 2](projeto-02-pipeline-comercial/README.md). O dataset `controle` foi criado na estrutura inicial, mas não é usado nesta versão.
+Encerrei este projeto com a modelagem, as consultas e a conciliação em Python. A evolução com ingestão e Airflow ficou no [Projeto 2](../projeto-02-pipeline-comercial/README.md). O dataset `controle` foi criado na estrutura inicial, mas não é usado nesta versão.
 
-## Evidências dos projetos
-
-- [Projeto 1: execução no BigQuery e testes de conciliação](evidencias-projeto-1.md).
-- [Projeto 2: orquestração, qualidade e resultados](projeto-02-pipeline-comercial/docs/evidencias-visuais.md).
