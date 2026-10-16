@@ -1,0 +1,8 @@
+name: lakehouse-comercial-databricks
+services:
+  validar:
+    build: .
+    volumes:
+      - .:/projeto
+    environment:
+      SPARK_LOCAL_IP: 127.0.0.1
