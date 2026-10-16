@@ -1,0 +1,44 @@
+{
+  "validado_em_utc": "2026-10-13T17:02:25.530468+00:00",
+  "ambiente": "Docker local, Spark 4.0.0 / Delta Lake 4.0.0",
+  "databricks_validado": false,
+  "etapas": [
+    {
+      "eventos_bronze": 50,
+      "quarentena": 0,
+      "pedidos": 30,
+      "lote": "01_inicial",
+      "conciliado_com_python": true
+    },
+    {
+      "eventos_bronze": 79,
+      "quarentena": 3,
+      "pedidos": 40,
+      "lote": "02_movimento",
+      "conciliado_com_python": true
+    },
+    {
+      "eventos_bronze": 90,
+      "quarentena": 1,
+      "pedidos": 48,
+      "lote": "03_atrasos_e_correcao",
+      "conciliado_com_python": true
+    }
+  ],
+  "reexecucao_preservou_conteudo": true,
+  "versao_antiga_nao_reverteu_cancelamento": true,
+  "rejeicoes_controladas": [
+    "evento_conflitante",
+    "versao_ambigua",
+    "devolucao_excedente",
+    "faturamento_excedente"
+  ],
+  "recuperacao_conferida": true,
+  "pedidos": 48,
+  "totais": {
+    "valor_aberto": "17250.00",
+    "valor_faturado": "4170.00",
+    "valor_devolvido": "195.00",
+    "receita_apos_devolucao": "3975.00"
+  }
+}

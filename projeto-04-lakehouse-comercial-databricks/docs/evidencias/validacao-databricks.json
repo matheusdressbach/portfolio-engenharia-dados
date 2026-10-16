@@ -1,0 +1,28 @@
+{
+  "data": "2026-10-15",
+  "ambiente": "Databricks Free Edition",
+  "fonte": "capturas fornecidas pelo usuário na conversa",
+  "catalogo": "workspace",
+  "compute": "Serverless",
+  "job_id": "713639769239745",
+  "run_id": "97068621573078",
+  "status": "Succeeded",
+  "duracao_segundos": 250,
+  "pedidos": 48,
+  "carteira_aberta": "17250.00",
+  "faturamento": "4170.00",
+  "devolucoes": "195.00",
+  "receita_apos_devolucao": "3975.00",
+  "testes_negativos_completos_no_workspace": false,
+  "capturas": [
+    "databricks-volume.png",
+    "databricks-lote-inicial.png",
+    "databricks-lote-movimento.png",
+    "databricks-lote-correcao.png",
+    "databricks-priorizacao-pedidos.png",
+    "databricks-devolucoes-categoria.png",
+    "databricks-carteira-vendedores.png",
+    "databricks-job-sucesso.png",
+    "databricks-conferencia-job.png"
+  ]
+}

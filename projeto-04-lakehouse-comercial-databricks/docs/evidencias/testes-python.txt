@@ -1,0 +1,17 @@
+test_48_pedidos (test_regras.RegrasComerciais.test_48_pedidos) ... ok
+test_antigo_nao_desfaz_cancelamento (test_regras.RegrasComerciais.test_antigo_nao_desfaz_cancelamento) ... ok
+test_devolucao_nao_reabre_pedido (test_regras.RegrasComerciais.test_devolucao_nao_reabre_pedido) ... ok
+test_documento_pendente_resolvido (test_regras.RegrasComerciais.test_documento_pendente_resolvido) ... ok
+test_estorno_nao_conta_receita (test_regras.RegrasComerciais.test_estorno_nao_conta_receita) ... ok
+test_excesso_devolucao (test_regras.RegrasComerciais.test_excesso_devolucao) ... ok
+test_excesso_faturamento (test_regras.RegrasComerciais.test_excesso_faturamento) ... ok
+test_faturamento_parcial (test_regras.RegrasComerciais.test_faturamento_parcial) ... ok
+test_id_reutilizado (test_regras.RegrasComerciais.test_id_reutilizado) ... ok
+test_quantidade_negativa_nao_publicada (test_regras.RegrasComerciais.test_quantidade_negativa_nao_publicada) ... ok
+test_repeticao (test_regras.RegrasComerciais.test_repeticao) ... ok
+test_versao_ambigua (test_regras.RegrasComerciais.test_versao_ambigua) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.006s
+
+OK
