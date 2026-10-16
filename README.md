@@ -11,7 +11,6 @@ O contexto comercial conecta os trabalhos. As entregas usam dados sintéticos, r
 | 1 · Organizar e conferir | [Análise comercial](projeto-01-analise-comercial/README.md) | Os indicadores representam corretamente as vendas? | Modelagem em camadas, SQL no BigQuery e conciliação em Python. |
 | 2 · Construir e operar | [Pipeline comercial orquestrado](projeto-02-pipeline-comercial/README.md) | Como atualizar os dados e recuperar a execução quando algo falha? | PostgreSQL, REST API, Python e Airflow; carga incremental, watermarks, idempotência e bloqueio por qualidade. |
 | 3 · Preservar e interpretar | [Histórico e análise da carteira](projeto-03-carteira-comercial-dbt/README.md) | Como analisar vendas e comportamento sem perder o contexto histórico do cliente? | dbt, snapshots, atribuição histórica, retenção por coorte, concentração de receita e sinais de queda comercial. |
-
 | 4 · Aplicar mudanças no lakehouse | [Lakehouse comercial no Databricks](projeto-04-lakehouse-comercial-databricks/README.md) | Como consolidar pedidos, faturamentos e devoluções recebidos fora de ordem? | PySpark, Spark SQL, Delta Lake, quarentena, Unity Catalog e Job com dependências. |
 
 ## Projeto 1 — Análise comercial
