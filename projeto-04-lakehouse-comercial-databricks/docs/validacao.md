@@ -24,7 +24,7 @@ A única rejeição restante é a quantidade negativa da versão antiga do fatur
 
 [Relatório Spark](evidencias/validacao-spark.json) · [Log da integração](evidencias/spark-local.log) · [Testes Python](evidencias/testes-python.txt)
 
-O workflow do portfólio está em `.github/workflows/projeto-04-lakehouse.yml`, com os caminhos ajustados para a pasta deste projeto. O resultado da execução no GitHub Actions deve ser conferido separadamente das evidências locais e do Databricks.
+O workflow do portfólio está em `.github/workflows/projeto-04-lakehouse.yml`, com os caminhos ajustados para a pasta deste projeto. A [primeira execução no GitHub Actions](https://github.com/matheusdressbach/portfolio-engenharia-dados/actions/runs/38833598886), sobre o commit `7b9a799`, passou em 15/10/2026, com duração total de 2min20s. Ela executou os testes Python e a integração Spark/Delta, publicando o artefato `validacao-lakehouse`.
 
 
 ## Execução no Databricks — 15/10/2026
