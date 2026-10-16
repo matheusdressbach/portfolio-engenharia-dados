@@ -1,0 +1,30 @@
+name: projeto-04-lakehouse
+on:
+  push:
+    paths:
+      - 'projeto-04-lakehouse-comercial-databricks/**'
+      - '.github/workflows/projeto-04-lakehouse.yml'
+  pull_request:
+    paths:
+      - 'projeto-04-lakehouse-comercial-databricks/**'
+      - '.github/workflows/projeto-04-lakehouse.yml'
+  workflow_dispatch:
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: projeto-04-lakehouse-comercial-databricks
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir regras comerciais
+        run: python3 -m unittest discover -s tests -v
+      - name: Conferir Spark e Delta Lake
+        run: docker compose run --build --rm validar
+      - name: Guardar registros da execução
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validacao-lakehouse
+          path: projeto-04-lakehouse-comercial-databricks/resultados/
