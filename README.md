@@ -1,6 +1,6 @@
 # Portfólio de Engenharia de Dados — Matheus Dressbach
 
-Estou construindo este portfólio para demonstrar, na prática, como organizo dados comerciais, confiro resultados e trato a operação de um pipeline. Os três projetos seguem uma sequência: primeiro a análise, depois a ingestão e a orquestração, e por fim o histórico necessário para interpretar a carteira ao longo do tempo.
+Estou construindo este portfólio para demonstrar, na prática, como organizo dados comerciais, confiro resultados e trato a operação de um pipeline. Os quatro projetos seguem uma sequência: análise, ingestão e orquestração, histórico da carteira e processamento de eventos versionados em um lakehouse.
 
 O contexto comercial conecta os trabalhos. As entregas usam dados sintéticos, regras documentadas e cenários reproduzíveis; cada projeto registra o que foi validado e os limites da solução.
 
@@ -11,6 +11,8 @@ O contexto comercial conecta os trabalhos. As entregas usam dados sintéticos, r
 | 1 · Organizar e conferir | [Análise comercial](projeto-01-analise-comercial/README.md) | Os indicadores representam corretamente as vendas? | Modelagem em camadas, SQL no BigQuery e conciliação em Python. |
 | 2 · Construir e operar | [Pipeline comercial orquestrado](projeto-02-pipeline-comercial/README.md) | Como atualizar os dados e recuperar a execução quando algo falha? | PostgreSQL, REST API, Python e Airflow; carga incremental, watermarks, idempotência e bloqueio por qualidade. |
 | 3 · Preservar e interpretar | [Histórico e análise da carteira](projeto-03-carteira-comercial-dbt/README.md) | Como analisar vendas e comportamento sem perder o contexto histórico do cliente? | dbt, snapshots, atribuição histórica, retenção por coorte, concentração de receita e sinais de queda comercial. |
+
+| 4 · Aplicar mudanças no lakehouse | [Lakehouse comercial no Databricks](projeto-04-lakehouse-comercial-databricks/README.md) | Como consolidar pedidos, faturamentos e devoluções recebidos fora de ordem? | PySpark, Spark SQL, Delta Lake, quarentena, Unity Catalog e Job com dependências. |
 
 ## Projeto 1 — Análise comercial
 
@@ -36,8 +38,16 @@ A análise inclui clientes que ainda compram, mas reduziram sua receita, retenç
 
 [Explorar o Projeto 3](projeto-03-carteira-comercial-dbt/README.md) · [Ler as análises](projeto-03-carteira-comercial-dbt/docs/analises.md) · [Ver a validação](projeto-03-carteira-comercial-dbt/docs/validacao.md)
 
+## Projeto 4 — Lakehouse comercial no Databricks
+
+Passei a tratar o ciclo pedido → faturamento → devolução com eventos versionados. Uma correção pode chegar depois de um cancelamento, e um documento pode chegar antes de sua referência. As camadas Bronze e Silver preservam os eventos e consolidam a versão válida; a posição comercial mostra saldo aberto, atrasos e devoluções.
+
+Os três lotes foram executados no Databricks Free Edition com Volume do Unity Catalog e compute serverless. O Job de processamento e conferência terminou com sucesso em 15/10/2026: 48 pedidos, R$ 17.250,00 de carteira aberta e R$ 3.975,00 após devoluções. Os 12 testes Python e a integração Spark/Delta também passaram localmente, incluindo bloqueios e recuperação. A origem por arquivos é simulada; não há conexão direta com o pipeline do Projeto 2.
+
+[Explorar o Projeto 4](projeto-04-lakehouse-comercial-databricks/README.md) · [Ver resultados e evidências](projeto-04-lakehouse-comercial-databricks/docs/validacao.md)
+
 ## Como navegar e reproduzir
 
-Cada pasta tem seu próprio README, instruções de execução e registros de validação. O Projeto 1 oferece reprodução offline com Python. Os projetos 2 e 3 usam Docker; o Projeto 3 executa inteiramente de forma local. Para trabalhar com BigQuery, consulte as condições do Sandbox documentadas nos projetos 1 e 2.
+Cada pasta tem seu próprio README, instruções de execução e registros de validação. O Projeto 1 oferece reprodução offline com Python. Os projetos 2 e 3 usam Docker; o Projeto 3 executa inteiramente de forma local. O Projeto 4 oferece testes locais com Docker e notebooks para execução no Databricks Free Edition. Para trabalhar com BigQuery, consulte as condições do Sandbox documentadas nos projetos 1 e 2.
 
-Este portfólio reúne as entregas técnicas que sustentam a apresentação dos projetos no meu LinkedIn: o problema de negócio, as escolhas de engenharia e a evidência do resultado. A sequência mostra competências complementares, sem tratar os três casos como um único ambiente de produção.
+Este portfólio reúne as entregas técnicas que sustentam a apresentação dos projetos no meu LinkedIn: o problema de negócio, as escolhas de engenharia e a evidência do resultado. A sequência mostra competências complementares, sem tratar os quatro casos como um único ambiente de produção.
